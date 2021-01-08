@@ -1,6 +1,11 @@
 {
     "name": "rossa-language-support",
     "displayName": "Rossa Language Support",
+    "publisher": "BenjaminPark",
+    "author": {
+        "name": "Benjamin Park",
+        "email": "parkbenjamin2@gmail.com"
+    },
     "description": "",
     "version": "0.0.1",
     "engines": {
