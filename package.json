@@ -9,7 +9,17 @@
     "categories": [
         "Programming Languages"
     ],
+    "activationEvents": [
+        "onCommand:rossa.run"
+    ],
+    "main": "./extension",
     "contributes": {
+        "commands": [
+            {
+                "command": "rossa.run",
+                "title": "Rossa: Run File"
+            }
+        ],
         "languages": [
             {
                 "id": "rossa",
