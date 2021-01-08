@@ -6,6 +6,9 @@
         "name": "Benjamin Park",
         "email": "parkbenjamin2@gmail.com"
     },
+    "repository": {
+        "url": "https://github.com/Nallantli/rossa-language-support"
+    },
     "description": "",
     "version": "0.0.1",
     "engines": {
