@@ -1,0 +1,212 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Rossa",
+	"patterns": [
+		{
+			"include": "#expression"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "\\#.*$"
+				}
+			]
+		},
+		"expression": {
+			"patterns": [
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#function"
+				},
+				{
+					"include": "#paren-expression"
+				},
+				{
+					"include": "#array-expression"
+				},
+				{
+					"include": "#block-expression"
+				},
+				{
+					"include": "#literals"
+				},
+				{
+					"include": "#operators"
+				},
+				{
+					"include": "#types"
+				},
+				{
+					"include": "#variables"
+				}
+			]
+		},
+		"paren-expression": {
+			"begin": "\\(",
+			"end": "\\)",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.paren.open.rossa"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.paren.close.rossa"
+				}
+			},
+			"name": "expression.group.rossa",
+			"patterns": [
+				{
+					"include": "#expression"
+				}
+			]
+		},
+		"array-expression": {
+			"begin": "\\[",
+			"end": "\\]",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.square.open.rossa"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.square.close.rossa"
+				}
+			},
+			"name": "expression.array.rossa",
+			"patterns": [
+				{
+					"include": "#expression"
+				}
+			]
+		},
+		"block-expression": {
+			"begin": "\\{",
+			"end": "\\}",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.block.open.rossa"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.block.close.rossa"
+				}
+			},
+			"name": "expression.block.rossa",
+			"patterns": [
+				{
+					"include": "#expression"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.rossa",
+					"match": "\\b(try|catch|if|while|for|return|refer|ref|virtual|static|struct|class|var|extern_call|_call_op|break|continue|then|else|elif|in|do|switch|of|case|load)\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.rossa",
+					"match": "\\b(new)\\b"
+				},
+				{
+					"name": "keyword.operator.rossa",
+					"match": "(\\~|\\+|\\-|\\*|\\/|\\%|\\.|\\=|\\>|\\<|\\?|\\:|\\!|\\$|\\&|\\^)"
+				}
+			]
+		},
+		"literals": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.rossa",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.rossa",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.single.rossa",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"name": "constant.character.escape.rossa",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "constant.numeric.rossa",
+					"match": "\\b(\\d*\\.?\\d+)\\b"
+				},
+				{
+					"name": "constant.language.rossa",
+					"match": "\\b(true|false|nil)\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language.rossa",
+					"match": "\\b(this|alloc|length|size|charn|chars|parse)\\b"
+				},
+				{
+					"name": "variable.rossa",
+					"match": "\\b([a-zA-Z_][_a-zA-Z|\\d]*)\\b"
+				},
+				{
+					"name": "variable.other.rossa",
+					"begin": "`",
+					"end": "`"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "storage.type.rossa",
+					"match": "(\\@[a-zA-Z_][_a-zA-Z\\d]*(\\.?[a-zA-Z_][_a-zA-Z\\d]*)*)\\b"
+				},
+				{
+					"name": "storage.type.rossa",
+					"match": "\\b(Number|String|Array|Function|Object|Pointer|Type|String|Dictionary)\\b"
+				}
+			]
+		},
+		"function": {
+			"name": "meta.section.rossa",
+			"begin": "(\\b[_a-zA-Z][_a-zA-Z\\d]*|\\`.*?\\`)\\s*?\\(",
+			"beginCaptures": {
+				"1": {
+					"name": "entity.name.function"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#expression"
+				}
+			],
+			"end": "\\)"
+		}
+	},
+	"scopeName": "source.rossa"
+}

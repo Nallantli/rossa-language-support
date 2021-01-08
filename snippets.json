@@ -1,0 +1,114 @@
+{
+	"For Loop": {
+		"prefix": "for",
+		"body": [
+			"for $1 in $2 do {",
+			"\t$0",
+			"}"
+		]
+	},
+	"While Loop": {
+		"prefix": "while",
+		"body": [
+			"while $1 do {",
+			"\t$0",
+			"}"
+		]
+	},
+	"Static Class": {
+		"prefix": "static",
+		"body": [
+			"static $1 class {",
+			"\t$0",
+			"}"
+		]
+	},
+	"Struct Class": {
+		"prefix": "struct",
+		"body": [
+			"struct $1 class $2 {",
+			"\tinit($3) => {"
+			"\t\t$0",
+			"\t}",
+			"}"
+		]
+	},
+	"Virtual Class": {
+		"prefix": "virtual",
+		"body": [
+			"virtual $1 class {",
+			"\t$0",
+			"}"
+		]
+	},
+	"If-Then Clause": {
+		"prefix": "if",
+		"body": [
+			"if $1 then {",
+			"\t$2",
+			"} $0"
+		]
+	},
+	"Elif-Then Clause": {
+		"prefix": "elif",
+		"body": [
+			"elif $1 then {",
+			"\t$2",
+			"} $0"
+		]
+	},
+	"Else Clause": {
+		"prefix": "else",
+		"body": [
+			"else {",
+			"\t$0",
+			"}"
+		]
+	},
+	"Switch Statement": {
+		"prefix": "switch",
+		"body": [
+			"switch $1 of {",
+			"\t$0",
+			"}"
+		]
+	},
+	"Switch-Case": {
+		"prefix": "case",
+		"body": [
+			"case $1 do $0;"
+		]
+	},
+	"Switch-Case Block": {
+		"prefix": "caseblock",
+		"body": [
+			"case $1 do {",
+			"\t$0",
+			"}"
+		]
+	},
+	"Try-Catch Statement": {
+		"prefix": "try",
+		"body": [
+			"try {",
+			"\t$0",
+			"} catch ${1:e} then {",
+			"\tputln($1);",
+			"}"
+		]
+	},
+	"Define Function": {
+		"prefix": "function",
+		"body": [
+			"${1:function}($2) => {"
+			"\t$0",
+			"}"
+		]
+	},
+	"Define Lambda": {
+		"prefix": "lambda",
+		"body": [
+			"($1)[$2] => $0;"
+		]
+	}
+}

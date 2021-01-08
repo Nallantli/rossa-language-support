@@ -1,0 +1,40 @@
+{
+    "name": "rossa-language-support",
+    "displayName": "Rossa Language Support",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "rossa",
+                "aliases": [
+                    "Rossa",
+                    "rossa"
+                ],
+                "extensions": [
+                    ".ra"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "rossa",
+                "scopeName": "source.rossa",
+                "path": "./syntaxes/rossa.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "rossa",
+                "path": "./snippets.json"
+            }
+        ]
+    }
+}
