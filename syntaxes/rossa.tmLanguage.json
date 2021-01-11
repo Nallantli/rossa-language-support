@@ -188,7 +188,7 @@
 				},
 				{
 					"name": "storage.type.rossa",
-					"match": "\\b(Nil|Any|Number|String|Array|Function|Object|Pointer|Type|String|Dictionary)\\b"
+					"match": "\\b(Boolean|Nil|Any|Number|String|Array|Function|Object|Pointer|Type|String|Dictionary)\\b"
 				}
 			]
 		},
