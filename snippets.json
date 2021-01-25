@@ -2,7 +2,7 @@
 	"For Loop": {
 		"prefix": "for",
 		"body": [
-			"for $1 in $2 do {",
+			"for {$1:i} in $2 do {",
 			"\t$0",
 			"}"
 		]
@@ -27,7 +27,7 @@
 		"prefix": "struct",
 		"body": [
 			"struct $1 class $2 {",
-			"\tinit($3) => {"
+			"\tinit($3) => {",
 			"\t\t$0",
 			"\t}",
 			"}"
@@ -100,7 +100,7 @@
 	"Define Function": {
 		"prefix": "function",
 		"body": [
-			"${1:function}($2) => {"
+			"${1:function}($2) => {",
 			"\t$0",
 			"}"
 		]

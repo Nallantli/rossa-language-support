@@ -10,7 +10,7 @@
         "url": "https://github.com/Nallantli/rossa-language-support"
     },
     "description": "",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "engines": {
         "vscode": "^1.52.0"
     },
