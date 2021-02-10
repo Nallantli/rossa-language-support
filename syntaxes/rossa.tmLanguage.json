@@ -113,7 +113,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.rossa",
-					"match": "\\b(delete|new|throw|try|catch|if|while|for|return|refer|ref|virtual|static|struct|class|var|extern_call|_call_op|break|continue|then|else|elif|in|do|switch|of|case|load)\\b"
+					"match": "\\b(const|delete|new|throw|try|catch|if|while|for|return|refer|ref|virtual|static|struct|class|var|extern_call|_call_op|break|continue|then|else|elif|in|do|switch|of|case|load)\\b"
 				}
 			]
 		},
